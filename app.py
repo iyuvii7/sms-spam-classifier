@@ -8,6 +8,12 @@ import string
 nltk.download('punkt')  # Download tokenizer
 nltk.download('stopwords')  # Download stopwords
 
+# Download punkt_tab if not found
+try:
+    nltk.data.find('tokenizers/punkt_tab/english.pickle')
+except LookupError:
+    nltk.download('punkt_tab')
+
 # Initialize stemmer
 ps = PorterStemmer()
 stop_words = set(stopwords.words('english'))
