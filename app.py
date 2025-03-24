@@ -4,9 +4,9 @@ import nltk
 from nltk.stem.porter import PorterStemmer
 from nltk.corpus import stopwords
 import string
-
-# Download NLTK stopwords (ensure it's available)
-nltk.download('stopwords')
+# Download necessary NLTK data
+nltk.download('punkt')  # Download tokenizer
+nltk.download('stopwords')  # Download stopwords
 
 # Initialize stemmer
 ps = PorterStemmer()
